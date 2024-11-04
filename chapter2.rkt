@@ -864,6 +864,8 @@
 #| (define (end-segment segment) (cdr segment)) |#
 
 ; Exercise 2.49
+(define (draw-line segment1 segment2)
+  '())
 (define (segments->painter segment-list)
   (lambda (frame)
     (for-each
@@ -901,25 +903,14 @@
   (let ((bottom (make-vect 0.5 0.0))
         (right (make-vect 1.0 0.5))
         (top (make-vect 0.5 1.0))
-        (left (make-vect 0.0 0.5))
+        (left (make-vect 0.0 0.5)))
     (segments->painter
      (list
       (make-segment bottom right)
       (make-segment right top)
       (make-segment top left)
-      (make-segment left bottom))))))
+      (make-segment left bottom)))))
 
-(define (diamond-painter frame)
-  (let ((bottom (make-vect 0.5 0.0))
-        (right (make-vect 1.0 0.5))
-        (top (make-vect 0.5 1.0))
-        (left (make-vect 0.0 0.5))
-    (segments->painter
-     (list
-      (make-segment bottom right)
-      (make-segment right top)
-      (make-segment top left)
-      (make-segment left bottom))))))
 ; -------------------------------------------------------------
 
 
@@ -1017,4 +1008,13 @@
 
 ; Exercise 2.52
 ; a.
+; TODO
+
+; -------------------------------------
+;
+; 2.3
+;
+; -------------------------------------
+
+
 
